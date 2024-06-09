@@ -167,7 +167,7 @@ public class OrderService {
         }
 
         Double totalAmount = existing.getTotalAmount();
-        List<OrderItems> orderItemsList = this.orderItemsRepository.findByIdIn(removeOrderItemsDto.getOrderItemsId());
+        List<OrderItems> orderItemsList = this.orderItemsRepository.findByOrderItemIdIn(removeOrderItemsDto.getOrderItemsId());
 
         for (OrderItems orderItems: orderItemsList) {
             totalAmount-= orderItems.getSubTotal();
