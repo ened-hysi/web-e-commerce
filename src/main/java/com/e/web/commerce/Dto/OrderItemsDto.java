@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderItemsDto {
-
     @JsonProperty("product_id")
     private Long productId;
     private Integer quantity;
